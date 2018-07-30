@@ -16,6 +16,9 @@ public class GirlController {
     @Autowired
     private GirlRepository girlRepository;
 
+    @Autowired
+    private GirlService girlService;
+
     //返回女生列表
     @GetMapping(value = "/girls")
     public List<Girl> girlList(@RequestParam("id") Integer id) {
@@ -55,10 +58,16 @@ public class GirlController {
     public void girlDelete(@PathVariable("id") Integer id) {
         girlRepository.delete(id);
     }
+
     //通过年龄查询女生列表
     @GetMapping(value = "/girls/age/{age}")
-    public List<Girl> girlListByAge(@PathVariable("age") Integer age)
-    {
+    public List<Girl> girlListByAge(@PathVariable("age") Integer age) {
         return girlRepository.findByAge(age);
+    }
+
+    //插入两个女生
+    @PostMapping(value = "/girls/two")
+    public void girlTwo() {
+        girlService.insertTwo();
     }
 }
