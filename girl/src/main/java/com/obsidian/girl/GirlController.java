@@ -21,8 +21,8 @@ public class GirlController {
 
     //返回女生列表
     @GetMapping(value = "/girls")
-    public List<Girl> girlList(@RequestParam("id") Integer id) {
-        return girlRepository.findById(id);
+    public List<Girl> girlList() {
+        return girlRepository.findAll();
     }
 
     //添加一个女生
