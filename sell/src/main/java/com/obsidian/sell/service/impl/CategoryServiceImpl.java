@@ -22,7 +22,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public ProductCategory findOne(Integer categoryId) {
-        return repository.findOne();
+        return repository.findOne(categoryId);
     }
 
     @Override
@@ -32,7 +32,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList) {
-        return repository.findByCategoryTypeIn();
+        return repository.findByCategoryTypeIn(categoryTypeList);
     }
 
     @Override

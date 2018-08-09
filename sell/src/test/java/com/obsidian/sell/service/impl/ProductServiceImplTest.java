@@ -33,7 +33,7 @@ public class ProductServiceImplTest {
     @Test
     public void findUpAll() throws Exception {
         List<ProductInfo> productInfoList = productService.findUpAll();
-        Assert.assertNotEquals(0, productInfoList.size());\
+        Assert.assertNotEquals(0, productInfoList.size());
     }
 
     @Test
@@ -56,6 +56,6 @@ public class ProductServiceImplTest {
         productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
         productInfo.setCategoryType(2);
         ProductInfo result = productService.save(productInfo);
-        Assert.assertNotEquals(result);
+        Assert.assertNotNull(result);
     }
 }
