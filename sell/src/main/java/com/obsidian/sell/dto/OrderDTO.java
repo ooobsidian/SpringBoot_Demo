@@ -1,13 +1,8 @@
-package com.obsidian.sell.dataobject;
+package com.obsidian.sell.dto;
 
-import com.obsidian.sell.enums.OrderStatusEnum;
-import com.obsidian.sell.enums.PayStatusEnum;
+import com.obsidian.sell.dataobject.OrderDetail;
 import lombok.Data;
-import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Transient;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -16,15 +11,11 @@ import java.util.List;
  * @program: sell
  * @description:
  * @author: obsidian
- * @create: 2018-08-10 23:08
+ * @create: 2018-08-11 00:45
  */
-@Entity
 @Data
-@DynamicUpdate
-public class OrderMaster {
-
+public class OrderDTO {
     //订单ID
-    @Id
     private String orderId;
 
     //买家姓名
@@ -43,10 +34,10 @@ public class OrderMaster {
     private BigDecimal orderAmount;
 
     //订单状态,默认0为新下单
-    private Integer orderStatus = OrderStatusEnum.NEW.getCode();
+    private Integer orderStatus;
 
     //支付状态,默认0为未支付
-    private Integer payStatus = PayStatusEnum.WAIT.getCode();
+    private Integer payStatus;
 
     //创建时间
     private Date createTime;
@@ -54,4 +45,5 @@ public class OrderMaster {
     //更新时间
     private Date updateTime;
 
+    List<OrderDetail> orderDetailList;
 }

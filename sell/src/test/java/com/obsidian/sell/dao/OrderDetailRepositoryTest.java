@@ -28,7 +28,6 @@ public class OrderDetailRepositoryTest {
         orderDetail.setProductId("1235");
         orderDetail.setProductName("牛肉面");
         orderDetail.setProductPrice(new BigDecimal(7));
-        orderDetail.setProductQuantity();
         orderDetail.setProductIcon("http://xxxxx.jpg");
         orderDetail.setProductQuantity(2);
 
@@ -38,7 +37,7 @@ public class OrderDetailRepositoryTest {
 
     @Test
     public void findByOrderId() throws Exception {
-        List<OrderDetail> orderDetailList = repository.findByOrderId('11111');
+        List<OrderDetail> orderDetailList = repository.findByOrderId("11111");
         Assert.assertNotEquals(0, orderDetailList.size());
     }
 }
