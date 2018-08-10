@@ -1,6 +1,6 @@
 package com.obsidian.sell.service.impl;
 
-import com.obsidian.sell.dao.ProductInfo;
+import com.obsidian.sell.dataobject.ProductInfo;
 import com.obsidian.sell.dao.ProductInfoRepository;
 import com.obsidian.sell.enums.ProductStatusEnum;
 import com.obsidian.sell.service.ProductSerivce;

@@ -3,7 +3,7 @@ package com.obsidian.sell.controller;
 import com.obsidian.sell.VO.ProductInfoVO;
 import com.obsidian.sell.VO.ProductVO;
 import com.obsidian.sell.VO.ResultVO;
-import com.obsidian.sell.dao.ProductInfo;
+import com.obsidian.sell.dataobject.ProductInfo;
 import com.obsidian.sell.dataobject.ProductCategory;
 import com.obsidian.sell.service.CategoryService;
 import com.obsidian.sell.service.ProductSerivce;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -38,7 +37,7 @@ public class BuyerProductController {
     @GetMapping("/list")
     public ResultVO list() {
 //        1.查询所有上架商品
-        List<ProductInfo> productInfoList = productSerivce.findUpAll()
+        List<ProductInfo> productInfoList = productSerivce.findUpAll();
 //        2.查询类目(一次性查询)
 //        List<Integer> categoryTypeList = new ArrayList<>();
         //传统方法

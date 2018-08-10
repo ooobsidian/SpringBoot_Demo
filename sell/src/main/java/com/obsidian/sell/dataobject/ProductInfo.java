@@ -1,4 +1,4 @@
-package com.obsidian.sell.dao;
+package com.obsidian.sell.dataobject;
 
 import lombok.Data;
 

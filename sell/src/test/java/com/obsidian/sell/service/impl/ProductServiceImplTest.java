@@ -1,6 +1,6 @@
 package com.obsidian.sell.service.impl;
 
-import com.obsidian.sell.dao.ProductInfo;
+import com.obsidian.sell.dataobject.ProductInfo;
 import com.obsidian.sell.enums.ProductStatusEnum;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,11 +11,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.awt.print.Pageable;
 import java.math.BigDecimal;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

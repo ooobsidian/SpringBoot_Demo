@@ -1,6 +1,6 @@
 package com.obsidian.sell.service;
 
-import com.obsidian.sell.dao.ProductInfo;
+import com.obsidian.sell.dataobject.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
